@@ -4,9 +4,11 @@ return {
     cmd = 'Telescope',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-fzf-native.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+      },
     },
-    build = 'make',
     config = function()
       require('config.telescope')
       pcall(require('telescope').load_extension, 'fzf')

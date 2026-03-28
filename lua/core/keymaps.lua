@@ -4,6 +4,15 @@ map('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save file' })
 map('n', '<leader>q', '<cmd>q<cr>', { desc = 'Quit window' })
 map('n', '<Esc>', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlight' })
 
+map('n', '<leader>?', function()
+  local ok, wk = pcall(require, 'which-key')
+  if ok then
+    wk.show({ global = true })
+  else
+    vim.cmd('map')
+  end
+end, { desc = 'Lembrete de keymaps' })
+
 map('n', '<leader>sv', '<cmd>vsplit<cr>', { desc = 'Split vertical' })
 map('n', '<leader>sh', '<cmd>split<cr>', { desc = 'Split horizontal' })
 map('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Delete buffer' })
