@@ -41,8 +41,3 @@ Estrutura modular com `lazy.nvim`, LSP robusto, formatting on save, linting por 
 ## Tela inicial
 
 A tela inicial usa `alpha-nvim` com banner customizado `DeVIMdson` no lugar do texto padrão do Nvim.
-
-
-## Tutorial básico
-
-Veja `docs/devimdson-tutorial-basico.md` para um guia prático de navegação e uso diário.
